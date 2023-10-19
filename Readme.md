@@ -2,7 +2,11 @@ This is my university proposal project of ***Lao Text-to-speech*** and **Lao Spe
 
 for the dataset and model of Lao TTS i will give link for download below:
 
-***dataset***: https://teraboxapp.com/s/1sQ5-rAr-hIfs93swtQ2WVw &nbsp;***best model***: https://teraboxapp.com/s/1gOziY9UP15MfNtJB3DndBQ &nbsp;***checkpoint_100000***: https://teraboxapp.com/s/1Jq6y5lwdbfxc2xYEl3fPnA &nbsp;
+&nbsp;***dataset***: https://teraboxapp.com/s/1sQ5-rAr-hIfs93swtQ2WVw \
+&nbsp;***best model***: https://teraboxapp.com/s/1gOziY9UP15MfNtJB3DndBQ \
+&nbsp;***checkpoint_100000***: https://teraboxapp.com/s/1Jq6y5lwdbfxc2xYEl3fPnA 
+
+
 
 for who want to continue just take step baed on my slide at ***Word and Slide/TTS_and_STT.pdf***
 

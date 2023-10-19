@@ -9,6 +9,6 @@ for who want to continue just take step baed on My Slide at Word and Slide/TTS_a
 
 Please don't forget to Install TTS to your local machine or you can clone from https://github.com/coqui-ai/TTS/
 
-If you interest of our project you can contact me on my github bio
+If you interest of our project you can contact me on my github bio or with my email address: khampaserthxayyavong@gmail.com
 
 Thank you for coming

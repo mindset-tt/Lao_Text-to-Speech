@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-To-Speech</title>
+    <link rel=icon href="{{ url_for('static', filename='./text-to-speech.png') }}" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Lao:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    * {
+        /* display: flexbox; */
+        margin: 0;
+        padding: 0;
+        font-family: "Noto Serif Lao";
+        /* background-color: #F5F5F5; */
+        /* background-color: #EEEEEE; */
+        background-color: #E0E0E0;
+    }
+
+
+
+
+    /* tag header  */
+
+    header {
+        background-color: #424242;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 100px;
+    }
+
+    .logo {
+        /* border: 2px solid red; */
+        display: flex;
+        background-color: #424242;
+    }
+
+    .logo-pic {
+        background-color: #424242;
+    }
+
+    .logo-pic>img {
+        margin-top: 5px;
+        width: 64px;
+        border-radius: 100%;
+        background-color: #424242;
+    }
+
+    .logo>.logo-p {
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 600;
+        margin-left: 15px;
+        margin-top: 18px;
+        background-color: #424242;
+    }
+
+    .power {
+        /* border: 2px solid red; */
+        padding-left: 100px;
+        background-color: #424242;
+    }
+
+    .power-p {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 400;
+        margin-left: -100px;
+        background-color: #424242;
+    }
+
+    .power-p-n1 {
+        color: #ffffff;
+        font-weight: 400;
+        /* font-size: 18px; */
+        background-color: #424242;
+    }
+
+
+
+
+    /* tag section title  */
+
+    .title {
+        padding: 25px;
+        display: flex;
+    }
+
+    .title-div1 {
+        display: block;
+        text-align: center;
+    }
+
+    .title-div1>img {
+        width: 150px;
+        height: 200px;
+    }
+
+    .title-div1>div>p {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+
+
+    .title-div2 {
+        width: 70%;
+        text-align: center;
+    }
+
+    .title-div2>.title-h1 {
+        font-weight: 800;
+    }
+
+    .title-div2>.title-h1-lao {
+        font-weight: 500;
+        margin-top: 15px;
+    }
+
+    .title-div2>.title-h1-en {
+        font-weight: 500;
+        margin-top: 15px;
+    }
+
+
+
+
+    /* tag section project */
+
+    main>.project {
+        /* border: 2px solid red; */
+        /* padding: 25px 200px; */
+        display: flex;
+        justify-content: center;
+        padding: 15px 0px;
+        margin-top: -160px;
+        /* align-items: center; */
+        /* text-size-adjust: 100%; */
+
+    }
+
+    .project>.main-project {
+        /* border: 2px solid red; */
+        width: 700px;
+    }
+
+    .main-project>.main-project-p1 {
+        font-size: 22px;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    .main-project>form {
+        padding-left: 25px;
+        margin-top: 15px;
+    }
+
+    .main-project>form>textarea {
+        background-color: #F5F5F5;
+        border: 1px solid #424242;
+        color: #000000;
+        width: 93%;
+        font-size: 20px;
+        font-weight: 400;
+        padding: 10px;
+        resize: none;
+        border-radius: 8px;
+    }
+
+    .main-project>form>div {
+        display: flex;
+        justify-content: space-between;
+        width: 96%;
+        /* border: 1px solid red; */
+    }
+
+    .main-project>form>div>button {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 10px 30px;
+        border: 2px solid #F5F5F5;
+        border-radius: 8px;
+        display: flex;
+        background-color: var(--colo);
+        --colo: #212121;
+    }
+
+    .main-project>form>div>button:hover {
+        --colo: #424242;
+    }
+
+    .main-project>form>div>button>i {
+        background-color: var(--colo);
+        color: #ffffff;
+        font-size: 30px;
+    }
+
+
+
+    .main-project>form>div>.btn-save {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 10px 30px;
+        border: 2px solid #F5F5F5;
+        border-radius: 8px;
+        display: flex;
+        background-color: var(--colo);
+        --colo: #212121;
+    }
+
+    .main-project>form>div>.btn-save:hover {
+        --colo: #424242;
+    }
+
+    .main-project>form>div>.btn-save>i {
+        background-color: var(--colo);
+        color: #ffffff;
+        font-size: 30px;
+    }
+
+
+
+    .main-project>h2 {
+        margin-left: 25px;
+        margin-top: 25px;
+    }
+
+    .main-project>div>audio {
+        padding-top: 5px;
+        margin-left: 25px;
+        width: 400px;
+    }
+
+
+
+
+    /* tag section project2 */
+
+    main>.project2 {
+        /* border: 2px solid red; */
+        /* padding: 25px 200px; */
+        display: flex;
+        justify-content: center;
+        padding: 20px 0px;
+        /* align-items: center; */
+        /* text-size-adjust: 100%; */
+
+    }
+
+    .project2>.primary-project {
+        /* border: 2px solid red; */
+        width: 700px;
+    }
+
+    .primary-project>.primary-project-p1 {
+        font-size: 22px;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+
+
+
+
+    .primary-project>.container-button {
+        /* border: 1px solid rgb(38, 0, 255); */
+        margin-top: 15px;
+        margin-left: 25px;
+    }
+
+    .primary-project>.container-button>form>label {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .container-button>form>input::file-selector-button {
+        border: 2px solid #828282;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 20px;
+        border-radius: 4px;
+        background-color: #F5F5F5;
+        /* transition: 1s; */
+    }
+
+    .container-button>form>input::file-selector-button:hover {
+        background-color: #BDBDBD;
+    }
+
+
+
+    .primary-project>.container-button>form>button {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 10px 30px;
+        border: 2px solid #F5F5F5;
+        border-radius: 8px;
+        display: flex;
+        background-color: var(--colo);
+        --colo: #212121;
+    }
+
+    .primary-project>.container-button>form>button:hover {
+        --colo: #424242;
+    }
+
+    .primary-project>.container-button>form>button>i {
+        background-color: var(--colo);
+        color: #ffffff;
+        font-size: 30px;
+    }
+
+
+
+    .container-audio {
+        padding-top: 15px;
+        margin-left: 25px;
+    }
+
+    .container-audio>audio {
+        width: 400px;
+    }
+
+    .primary-project>.form {
+        padding-left: 25px;
+        margin-top: 10px;
+    }
+
+    .primary-project>.form>textarea {
+        background-color: #F5F5F5;
+        border: 1px solid #424242;
+        color: #000000;
+        width: 93%;
+        font-size: 20px;
+        font-weight: 400;
+        padding: 10px;
+        resize: none;
+        border-radius: 8px;
+    }
+
+    /* .primary-project > button {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 25px;
+    margin-top: 5px;
+    padding: 10px 30px;
+    border: 2px solid #F5F5F5;
+    border-radius: 8px;
+    display: flex;
+    background-color: var(--colo);
+    --colo: #212121;
+}
+
+.primary-project > button:hover {
+    --colo: #424242;
+}
+
+.primary-project > button > i {
+    background-color: var(--colo);
+    color: #ffffff;
+    font-size: 30px;
+} */
+
+
+
+
+
+    /* tag footer */
+
+    footer {
+        background-color: #424242;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 100px;
+        margin-top: 50px;
+    }
+
+    footer>.cop {
+        background-color: #424242;
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+    footer>.advisor {
+        background-color: #424242;
+    }
+
+    footer>.advisor>.p1 {
+        background-color: #424242;
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+    footer>.advisor>span {
+        background-color: #424242;
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+    footer>.co-advisor {
+        background-color: #424242;
+        /* margin-left: 100px; */
+    }
+
+    footer>.co-advisor>.p1 {
+        background-color: #424242;
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+    footer>.co-advisor>span {
+        background-color: #424242;
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+    .loader {
+        border: 16px solid #f3f3f3;
+        /* Light grey */
+        border-top: 16px solid #3498db;
+        /* Blue */
+        border-radius: 50%;
+        margin-top: 15px;
+        margin-left: 25px;
+        width: 30px;
+        height: 30px;
+        animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .loader1 {
+        border: 16px solid #f3f3f3;
+        /* Light grey */
+        border-top: 16px solid #3498db;
+        /* Blue */
+        border-radius: 50%;
+        margin-top: 15px;
+        margin-left: 25px;
+        width: 30px;
+        height: 30px;
+        animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo" href="page.html">
+            <div class="logo-pic">
+                <img src="{{ url_for('static', filename='./LoiyToiyDev.png')}}" alt="">
+            </div>
+            <p class="logo-p">
+                LTDeveloper
+            </p>
+        </div>
+        <div class="power">
+            <p class="power-p">
+                ພັດທະນາໂດຍ:
+            </p>
+            <p class="power-p-n1">
+                ທ້າວ ຄຳປະເສີດ ໄຊຍະວົງ &emsp; ຫ້ອງ: 4CS2
+            </p>
+            <p class="power-p-n1">
+                ທ້າວ ໃຫຍ່ ແສງວິໄຊ&emsp;&emsp;&emsp; ຫ້ອງ: 4CS2
+            </p>
+        </div>
+    </header>
+    <main>
+        <section class="title">
+            <div class="title-div1">
+                <img src="{{ url_for('static', filename='./FSN_Original.png')}}" alt="">
+                <div>
+                    <p>ຄະນະວິທະຍາສາດທຳມະຊາດ</p>
+                    <p>ພາກວິຊາວິທະຍາສາດຄອມພິວເຕີ</p>
+                    <p>ສົກສຶກສາ: 2022-2023</p>
+                </div>
+            </div>
+            <div class="title-div2">
+                <h1 class="title-h1">
+                    ບົດໂຄງການຈົບຊັ້ນລະດັບປະລິນຍາຕີວິທະຍາສາດ
+                </h1>
+                <h1 class="title-h1-lao">
+                    ການຮຽນຮູ້ ແລະ ການຈື່ຈຳ ຂໍ້ຄວາມຂຽນພາສາລາວໄປເປັນຂໍ້ຄວາມສຽງ ດ້ວຍເຕັກນິກຂອງປັນຍາປະດິດຂັ້ນສູງ
+                </h1>
+                <h1 class="title-h1-en">
+                    Lao Text To Speech Recognition Using Deep Learning Technology
+                </h1>
+            </div>
+
+            <!-- <p class="scrip">
+                ຍິນດີຕອນຮັບ
+            </p> -->
+        </section>
+        <section class="project">
+            <article class="main-project">
+                <p class="main-project-p1">
+                    1. ການແປຂໍ້ຄວາມຂຽນພາສາລາວໄປເປັນຂໍ້ຄວາມສຽງ
+                </p>
+                <form id="tts-form" action="/call/martha" method="post">
+                    <textarea maxlength="400" placeholder="ກະລຸນາປ້ອນຂໍ້ຄວາມທີ່ທ່ານຕ້ອງການຟັງສຽງ..." rows="5"
+                        spellcheck="false" autofocus="autofocus" type="text" id="text-input" name="text"></textarea>
+                    <div>
+                        <button type="submit">
+                            ແປຂໍ້ຄວາມໄປເປັນສຽງ&nbsp;&nbsp;
+                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                        </button>
+                        <a class="btn-save" id="audio-download" type="submit">
+                            ບັນທຶກຟາຍສຽງ&nbsp;&nbsp;
+                            <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </form>
+                <h2>ຜົນທີ່ໄດ້ຮັບ:</h2>
+                <div class="loader1" id="loader1" style="display: none;"></div>
+                <div id="audio-box" style="display:none;">
+                    <audio id="audio-output" controls></audio>
+                </div>
+            </article>
+        </section>
+        <section class="project2">
+            <article class="primary-project">
+                <p class="primary-project-p1">
+                    2. ການແປຂໍ້ຄວາມສຽງພາສາລາວໄປເປັນຂໍ້ຄວາມຂຽນ
+                </p>
+                <div class="container-button">
+
+                    <form id="transcription-form">
+                        <label for="audio-file">ກະລຸນາເລືອກຟາຍສຽງ:</label>
+                        <input type="file" id="audio-file" accept="audio/*">
+                        <br></br>
+                        <button type="submit">
+                            ແປສຽງໄປເປັນຂໍ້ຄວາມ&nbsp;&nbsp;
+                            <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="loader" id="loader" style="display: none;"></div>
+                <div class="container-audio" id="audio-box2" style="display:none;">
+                    <audio controls id="audio-output2">
+                    </audio>
+                </div>
+                <div class="form">
+                    <textarea maxlength="400" placeholder="ກະລຸນາກົດປຸ່ມແປສຽງໄປເປັນຂໍ້ຄວາມກ່ອນ!" rows="5"
+                        spellcheck="false"  id="transcription"></textarea>
+                </div>
+
+                <!-- <button type="submit">
+                    ແປສຽງໄປເປັນຂໍ້ຄວາມ&nbsp;&nbsp;
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </button> -->
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="cop">
+            Copyright © LTDeveloper
+        </div>
+        <div class="advisor">
+            <p class="p1">ອາຈານຜູ້ນຳພາ:</p>
+            <span> &emsp; &emsp; &emsp; &emsp;&emsp;ອຈ.ປອ ລັດສະໝີ ຈິດຕະວົງ</span>
+        </div>
+        <div class="co-advisor">
+            <p class="p1">ອາຈານຜູ້ຊ່ວຍນຳພາ:</p>
+            <span> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;ອຈ.ປທ ສົມມິດ ທຸມມາລີ</span>
+        </div>
+    </footer>
+    <script>
+// Get the loader, form, audio box, audio output, and download link
+const loader = document.getElementById("loader1");
+const form = document.querySelector("#tts-form");
+const audioBox = document.querySelector("#audio-box");
+const audioOutput = document.querySelector("#audio-output");
+const downloadLink = document.querySelector("#audio-download");
+
+// Hide the loader initially
+loader.style.display = "none";
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    // Show the loader
+    loader.style.display = "block";
+    audioBox.style.display = "none";
+    const formData = new FormData(form);
+    fetch("/call/martha", {
+        method: "POST",
+        body: formData,
+    })
+        .then(response => response.blob())
+        .then(blob => {
+            const url = URL.createObjectURL(blob);
+
+            audioOutput.src = url;
+
+            // Create a new Blob object and set the download link
+            const newBlob = new Blob([blob], { type: "audio/wav" });
+            const data = window.URL.createObjectURL(newBlob);
+
+            // Provide a default filename for the downloaded file
+            downloadLink.href = data;
+            downloadLink.download = "audio.wav";
+            
+            // Hide the loader
+            loader.style.display = "none";
+            audioBox.style.display = "block";
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            // Hide the loader even if an error occurs
+            loader.style.display = "none";
+        });
+});
+
+        document.getElementById("transcription-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+
+            // Get the loader and the audio box
+            const loader = document.getElementById("loader");
+            const audioBox2 = document.querySelector("#audio-box2");
+
+            // Hide the audio box and show the loader
+            audioBox2.style.display = "none";
+            loader.style.display = "block";
+
+            const audioFileInput = document.getElementById("audio-file");
+            const formData = new FormData();
+            formData.append("audio_file", audioFileInput.files[0]);
+            const response = await fetch("/transcribe", {
+                method: "POST",
+                body: formData,
+            });
+            const result = await response.json();
+
+            document.getElementById("transcription").innerText = result.transcription || result.error;
+
+            const audioOutput2 = document.querySelector("#audio-output2");
+            audioOutput2.src = URL.createObjectURL(audioFileInput.files[0]);
+
+            // Hide the loader and show the audio box
+            loader.style.display = "none";
+            audioBox2.style.display = "block";
+        }); 
+    </script>
+</body>
+
+</html>

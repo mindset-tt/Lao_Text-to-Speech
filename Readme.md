@@ -1,4 +1,4 @@
-This is my university proposal project of Lao Text-to-speech and Lao Speech-to-Text by based on 2 model such as: Lao TTS I develop with YourTTS based on ***VITS***( Variational Inference with adversarial learning for end-to-end Text-to-Speech) and Lao STT I just provide API from ***Google Speech-to-Text API***
+This is my university proposal project of ***Lao Text-to-speech*** and **Lao Speech-to-Text** by based on 2 model such as: Lao TTS I develop with YourTTS based on ***VITS***( Variational Inference with adversarial learning for end-to-end Text-to-Speech) and Lao STT I just provide API from ***Google Speech-to-Text API***
 
 for the dataset and model of Lao TTS i will give link for download below:
 

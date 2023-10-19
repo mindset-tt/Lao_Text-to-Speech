@@ -2,9 +2,9 @@ This is my university proposal project of Lao Text-to-speech and Lao Speech-to-T
 
 for the dataset and model of Lao TTS i will give link for download below:
 
-dataset: https://teraboxapp.com/s/1sQ5-rAr-hIfs93swtQ2WVw
-best model: https://teraboxapp.com/s/1gOziY9UP15MfNtJB3DndBQ
-checkpoint_10000: https://teraboxapp.com/s/1Jq6y5lwdbfxc2xYEl3fPnA
+***dataset***: https://teraboxapp.com/s/1sQ5-rAr-hIfs93swtQ2WVw
+***best model***: https://teraboxapp.com/s/1gOziY9UP15MfNtJB3DndBQ
+***checkpoint_100000****: https://teraboxapp.com/s/1Jq6y5lwdbfxc2xYEl3fPnA
 
 for who want to continue just take step baed on my slide at ***Word and Slide/TTS_and_STT.pdf***
 

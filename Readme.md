@@ -10,7 +10,7 @@ for the dataset and model of Lao TTS i will give link for download below:
 
 for who want to continue just take step baed on my slide at ***Word and Slide/TTS_and_STT.pdf***
 
-Please don't forget to Install TTS to your local machine or you can clone from https://github.com/coqui-ai/TTS/
+Please don't forget to Install TTS to your local machine or you can clone from https://github.com/coqui-ai/TTS/ and put path to ipynb file
 
 If you interest of my project you can contact me on my github bio or with my email address: khampaserthxayyavong@gmail.com
 
